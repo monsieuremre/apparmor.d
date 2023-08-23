@@ -45,3 +45,12 @@ jobs:
 
       - name: "Reboot"
         run: sudo systemctl daemon-reexec
+
+      - name: Show confined proccesses
+        run: |
+          sudo ps auxZ | grep -v '\[.*\]'
+
+      - name: Show AppArmor log
+        run: |
+          sudo aa-log
+          sudo aa-log -s
