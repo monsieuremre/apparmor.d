@@ -42,3 +42,6 @@ jobs:
  
       - name: Show Number of loaded profile
         run: sudo aa-status --profiled
+
+      - name: "Reboot"
+        run: sudo systemctl daemon-reexec
